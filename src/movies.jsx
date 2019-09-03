@@ -12,6 +12,9 @@ class Movies extends Component {
     // this.setState({ movies: getMovies() });
   };
   render() {
+    const { length: count } = this.state.movies;
+
+    if (count === 0) return <p>There are no movies in the database</p>;
     return (
       <div>
         <h1 className="text-center m-2 ">This is the Movies Component</h1>
